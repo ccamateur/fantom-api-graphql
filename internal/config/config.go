@@ -94,7 +94,8 @@ type Log struct {
 
 // Lachesis represents the Lachesis node access configuration
 type Lachesis struct {
-	Url string `mapstructure:"url"`
+	Url         string   `mapstructure:"url"`
+	V5Bootstrap []string `mapstructure:"v5bootstrap"`
 }
 
 // Database represents the database access configuration.
