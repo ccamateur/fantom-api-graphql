@@ -95,6 +95,7 @@ type Log struct {
 // Lachesis represents the Lachesis node access configuration
 type Lachesis struct {
 	Url         string   `mapstructure:"url"`
+	NodeKey     string   `mapstructure:"node_key"`
 	V5Bootstrap []string `mapstructure:"v5bootstrap"`
 }
 
