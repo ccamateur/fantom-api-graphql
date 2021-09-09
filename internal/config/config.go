@@ -13,11 +13,15 @@ type Config struct {
 	// AppName holds the name of the application
 	AppName string `mapstructure:"app_name"`
 
-	// MySignature represents a signature of the server on blockchain.
-	MySignature ServerSignature `mapstructure:"me"`
+	// Sig represents a signature of the API server
+	// used to participate on the chain traffic and/or on the p2p nodes network.
+	Sig ServerSignature `mapstructure:"me"`
 
 	// Server configuration
 	Server Server `mapstructure:"server"`
+
+	// Node represents local network node configuration
+	LocalNode P2PNode `mapstructure:"p2p"`
 
 	// Logger configuration
 	Log Log `mapstructure:"log"`
@@ -82,8 +86,8 @@ type Server struct {
 // ServerSignature represents the signature used by this server
 // on sending requests to the blockchain, especially signed requests.
 type ServerSignature struct {
-	Address    common.Address   `mapstructure:"address"`
-	PrivateKey ecdsa.PrivateKey `mapstructure:"pkey"`
+	Address    common.Address    `mapstructure:"address"`
+	PrivateKey *ecdsa.PrivateKey `mapstructure:"key"`
 }
 
 // Log represents the logger configuration
@@ -94,9 +98,15 @@ type Log struct {
 
 // Lachesis represents the Lachesis node access configuration
 type Lachesis struct {
-	Url         string   `mapstructure:"url"`
-	NodeKey     string   `mapstructure:"node_key"`
+	Url string `mapstructure:"url"`
+}
+
+// P2PNode represents the configuration of the Local API server node
+// participating in the p2p protocol.
+type P2PNode struct {
 	V5Bootstrap []string `mapstructure:"v5bootstrap"`
+	DbPath      string   `mapstructure:"db_path"`
+	BindAddress string   `mapstructure:"bind"`
 }
 
 // Database represents the database access configuration.

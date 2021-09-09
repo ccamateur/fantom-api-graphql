@@ -153,7 +153,7 @@ func StringToPrivateKeyHookFunc() mapstructure.DecodeHookFuncType {
 		if err != nil {
 			return nil, err
 		}
-		return *key, nil
+		return key, nil
 	}
 }
 

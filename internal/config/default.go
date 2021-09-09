@@ -23,6 +23,10 @@ const (
 	// defServerBind holds default API server binding address
 	defServerBind = "localhost:16761"
 
+	// defLocalNodeP2PAddress represents the default binding address
+	// of the local p2p discovery node
+	defLocalNodeP2PAddress = "0.0.0.0:0"
+
 	// default set of timeouts for the server
 	defReadTimeout     = 2
 	defWriteTimeout    = 15
@@ -116,6 +120,9 @@ func applyDefaults(cfg *viper.Viper) {
 	cfg.SetDefault(keyApiStateOrigin, defApiStateOrigin)
 	cfg.SetDefault(keyErc20TokenMapFilePath, defTokenLogoFilePath)
 	cfg.SetDefault(keyErc20Logos, defERC20Logo)
+
+	// p2p node defaults
+	cfg.SetDefault("p2p.bind", defLocalNodeP2PAddress)
 
 	// in-memory cache
 	cfg.SetDefault(keyCacheEvictionTime, defCacheEvictionTime)
