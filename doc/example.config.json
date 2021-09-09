@@ -1,9 +1,5 @@
 {
   "app_name": "My GraphQL API for Opera MainNet",
-  "me": {
-    "address": "0xE8E2ab527D1fDbCe570B221977BB5c3f12dFa1DA",
-    "pkey": "0xaa682338447d15ac4462d938716c120d085a0db81d3945b18017ae0788a121a7"
-  },
   "server": {
     "bind": "0.0.0.0:16761",
     "peers": [],
