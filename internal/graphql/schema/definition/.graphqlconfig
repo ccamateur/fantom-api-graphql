@@ -12,36 +12,28 @@
         "url": "https://xapi.fantom.network/",
         "introspect": false
       },
-      "XAPI1 Fantom.Network": {
-        "url": "https://xapi1.fantom.network/graphql",
+      "XAPI Node-A": {
+        "url": "https://xapi-nodea.fantom.network/",
         "introspect": false
       },
-      "XAPI2 Fantom.Network": {
-        "url": "https://xapi2.fantom.network/api",
+      "XAPI Node-B": {
+        "url": "https://xapi-nodeb.fantom.network/",
         "introspect": false
       },
-      "XAPI3 Fantom.Network": {
-        "url": "https://xapi3.fantom.network/graphql",
+      "XAPI Node-C": {
+        "url": "https://xapi-nodec.fantom.network/",
         "introspect": false
       },
-      "xAPI6 Fantom.Network": {
-        "url": "https://xapi6.fantom.network/graphql",
+      "XAPI Node-D": {
+        "url": "https://xapi-noded.fantom.network/",
         "introspect": false
       },
-      "xAPI30 Fantom.Network": {
-        "url": "https://xapi30.fantom.network/graphql",
+      "XAPI Node-E": {
+        "url": "https://xapi-nodee.fantom.network/",
         "introspect": false
       },
-      "xAPI31 Fantom.Network": {
-        "url": "https://xapi31.fantom.network/graphql",
-        "introspect": false
-      },
-      "xAPI36 Fantom.Network": {
-        "url": "https://xapi36.fantom.network/graphql",
-        "introspect": false
-      },
-      "xAPI37 Fantom.Network": {
-        "url": "https://xapi37.fantom.network/graphql",
+      "XAPI Node-F": {
+        "url": "https://xapi-nodef.fantom.network/",
         "introspect": false
       },
       "VM GraphQL Endpoint for TestNET": {

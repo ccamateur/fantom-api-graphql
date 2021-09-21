@@ -13,9 +13,9 @@ type NetworkNode struct {
 	// Node holds information about the node ID and ENR record.
 	Node *enode.Node
 
-	// Score tracks accuracy of the node record. It's incremented
-	// every time the node is detected and halved if a check fails.
-	Score int `json:"score"`
+	// HealthScore tracks the health status of the node record. It's incremented
+	// every time the node is detected and validated and halved if a check fails.
+	HealthScore int `json:"score"`
 
 	// Found represents the date and time the node was found.
 	Found time.Time `json:"found,omitempty"`
@@ -40,7 +40,7 @@ func (nn *NetworkNode) MarshalBSON() ([]byte, error) {
 	}{
 		Scheme:    "v4",
 		URL:       nn.Node.String(),
-		Score:     nn.Score,
+		Score:     nn.HealthScore,
 		Found:     nn.Found,
 		Responded: nn.LastResponse,
 		Checked:   nn.LastCheck,
@@ -70,7 +70,7 @@ func (nn *NetworkNode) UnmarshalBSON(data []byte) (err error) {
 	}
 
 	// copy score and timestamps
-	nn.Score = row.Score
+	nn.HealthScore = row.Score
 	nn.Found = row.Found
 	nn.LastResponse = row.Responded
 	nn.LastCheck = row.Checked

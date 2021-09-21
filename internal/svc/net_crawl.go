@@ -23,7 +23,7 @@ type networkCrawler struct {
 
 // name returns the name of the service used by orchestrator.
 func (nec *networkCrawler) name() string {
-	return "network crawler"
+	return "p2p crawler"
 }
 
 // init prepares the network crawler for collecting node data.
